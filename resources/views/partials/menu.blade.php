@@ -134,6 +134,16 @@
                     </ul>
                 </li>
             @endcan
+            @can('user_alert_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.user-alerts.index") }}" class="nav-link {{ request()->is('admin/user-alerts') || request()->is('admin/user-alerts/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-bell nav-icon">
+
+                        </i>
+                        {{ trans('cruds.userAlert.title') }}
+                    </a>
+                </li>
+            @endcan
             <li class="nav-item">
                 <a href="{{ route("admin.systemCalendar") }}" class="nav-link {{ request()->is('admin/system-calendar') || request()->is('admin/system-calendar/*') ? 'active' : '' }}">
                     <i class="nav-icon fa-fw fas fa-calendar">
