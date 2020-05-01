@@ -16,6 +16,9 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('remember_token')->nullable();
             $table->boolean('approved')->default(0)->nullable();
+            $table->boolean('verified')->default(0)->nullable();
+            $table->datetime('verified_at')->nullable();
+            $table->string('verification_token')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
