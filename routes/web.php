@@ -63,6 +63,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('user-alerts', 'UserAlertsController', ['except' => ['edit', 'update']]);
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
+    Route::get('global-search', 'GlobalSearchController@search')->name('globalSearch');
     Route::get('messenger', 'MessengerController@index')->name('messenger.index');
     Route::get('messenger/create', 'MessengerController@createTopic')->name('messenger.createTopic');
     Route::post('messenger', 'MessengerController@storeTopic')->name('messenger.storeTopic');

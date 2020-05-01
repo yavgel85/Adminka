@@ -14,6 +14,10 @@ class Country extends Model
 
     public $table = 'countries';
 
+    public static $searchable = [
+        'name',
+    ];
+
     protected $dates = [
         'created_at',
         'updated_at',
