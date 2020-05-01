@@ -71,6 +71,8 @@ return [
             'verified_at_helper'        => '',
             'verification_token'        => 'Verification token',
             'verification_token_helper' => '',
+            'team'                      => 'Team',
+            'team_helper'               => '',
         ],
     ],
     'country'        => [
@@ -89,8 +91,8 @@ return [
             'updated_at_helper' => '',
             'deleted_at'        => 'Deleted at',
             'deleted_at_helper' => '',
-            'created_by'        => 'Created By',
-            'created_by_helper' => '',
+            'team'              => 'Team',
+            'team_helper'       => '',
         ],
     ],
     'auditLog'       => [
@@ -115,6 +117,22 @@ return [
             'created_at_helper'   => '',
             'updated_at'          => 'Updated at',
             'updated_at_helper'   => '',
+        ],
+    ],
+    'team'           => [
+        'title'          => 'Teams',
+        'title_singular' => 'Team',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => '',
+            'created_at'        => 'Created at',
+            'created_at_helper' => '',
+            'updated_at'        => 'Updated At',
+            'updated_at_helper' => '',
+            'deleted_at'        => 'Deleted At',
+            'deleted_at_helper' => '',
+            'name'              => 'Name',
+            'name_helper'       => '',
         ],
     ],
 ];
