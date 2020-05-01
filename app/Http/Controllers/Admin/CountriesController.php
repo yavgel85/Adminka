@@ -19,7 +19,7 @@ class CountriesController extends Controller
         abort_if(Gate::denies('country_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         if ($request->ajax()) {
-            $query = Country::query()->select(sprintf('%s.*', (new Country)->table));
+            $query = Country::with(['created_by'])->select(sprintf('%s.*', (new Country)->table));
             $table = Datatables::of($query);
 
             $table->addColumn('placeholder', '&nbsp;');
@@ -77,6 +77,8 @@ class CountriesController extends Controller
     {
         abort_if(Gate::denies('country_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        $country->load('created_by');
+
         return view('admin.countries.edit', compact('country'));
     }
 
@@ -91,6 +93,8 @@ class CountriesController extends Controller
     public function show(Country $country)
     {
         abort_if(Gate::denies('country_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $country->load('created_by');
 
         return view('admin.countries.show', compact('country'));
     }
