@@ -2,6 +2,11 @@
     <nav class="sidebar-nav">
 
         <ul class="nav">
+            <li>
+                <select class="searchable-field form-control">
+
+                </select>
+            </li>
             <li class="nav-item">
                 <a href="{{ route("admin.home") }}" class="nav-link">
                     <i class="nav-icon fas fa-fw fa-tachometer-alt">
