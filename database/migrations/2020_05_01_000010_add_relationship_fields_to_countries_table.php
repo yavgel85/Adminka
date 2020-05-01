@@ -9,8 +9,8 @@ class AddRelationshipFieldsToCountriesTable extends Migration
     public function up()
     {
         Schema::table('countries', function (Blueprint $table) {
-            $table->unsignedInteger('created_by_id')->nullable();
-            $table->foreign('created_by_id', 'created_by_fk_1405131')->references('id')->on('users');
+            $table->unsignedInteger('team_id')->nullable();
+            $table->foreign('team_id', 'team_fk_1405142')->references('id')->on('teams');
         });
 
     }

@@ -13,4 +13,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Countries
     Route::apiResource('countries', 'CountriesApiController');
 
+    // Teams
+    Route::apiResource('teams', 'TeamApiController');
+
 });

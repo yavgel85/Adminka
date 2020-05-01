@@ -17,7 +17,7 @@ class CountriesApiController extends Controller
     {
         abort_if(Gate::denies('country_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new CountryResource(Country::with(['created_by'])->get());
+        return new CountryResource(Country::with(['team'])->get());
 
     }
 
@@ -35,7 +35,7 @@ class CountriesApiController extends Controller
     {
         abort_if(Gate::denies('country_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new CountryResource($country->load(['created_by']));
+        return new CountryResource($country->load(['team']));
 
     }
 
