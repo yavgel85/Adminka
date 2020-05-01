@@ -20,7 +20,8 @@
         "laravel/ui": "^2.0",
         "yajra/laravel-datatables-oracle": "^9.9",
         "laraveldaily/laravel-charts": "^0.1.14",
-        "laravel/passport": "^8.4"
+        "laravel/passport": "^8.4",
+        "nuovo/spreadsheet-reader": "^0.5.11"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
