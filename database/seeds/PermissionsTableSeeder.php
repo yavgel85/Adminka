@@ -94,6 +94,14 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => '22',
+                'title' => 'audit_log_show',
+            ],
+            [
+                'id'    => '23',
+                'title' => 'audit_log_access',
+            ],
+            [
+                'id'    => '24',
                 'title' => 'profile_password_edit',
             ],
         ];
