@@ -39,6 +39,13 @@ class Country extends Model
 
     }
 
+    public static function boot()
+    {
+        parent::boot();
+        Country::observe(new \App\Observers\CountryActionObserver);
+
+    }
+
     public function team()
     {
         return $this->belongsTo(Team::class, 'team_id');
